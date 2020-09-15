@@ -1,22 +1,19 @@
-#include<stdio.h>
-#include<conio.h>
-void main()
+#include <stdio.h>
+int main()
 {
-    int i, j, k;
-    char str[100];
-    char rev[100];
-    printf("Enter a string:\t");
-    scanf("%s", str);
-    printf("The original string is %s\n", str);
-    for(i = 0; str[i] != '\0'; i++);
-    {
-        k = i-1;
-    }
-    for(j = 0; j <= i-1; j++)
-    {
-        rev[j] = str[k];
-        k--;
-    }
-    printf("The reverse string is %s\n", rev);
-    getch();
+  int n, r = 0;
+
+  printf("Enter a number to reverse\n");
+  scanf("%d", &n);
+
+  while (n != 0)
+  {
+    r = r * 10;
+    r = r + n%10;
+    n = n/10;
+  }
+
+  printf("Reverse of the number = %d\n", r);
+
+  return 0;
 }
